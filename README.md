@@ -132,11 +132,15 @@ For additional information on how to launch on a Linux server see our [Server Do
 Citing Insights Version 1 release is expected in the end of May, and the planned features include: 
 * Enhanced PDF Search functionality
 * Multiple evaluators mode, with inter-reliability testing / norming, and analytics
-* Robust analytical reports & outcomes
+* Analytical reports & outcomes
 * Group Administration Console
 * Robust rubric resources
 * More Improvements to Design
+
+## Future Features
+Citing Insights will continue to develop the application, including:
 * Integration road-map with Learning Management System. 
+* Robust reports & outcomes, with data visualizations
 
 ## Built With
 * [MongoDB ](https://www.mongodb.com/) - database
