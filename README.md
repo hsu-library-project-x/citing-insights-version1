@@ -175,5 +175,5 @@ Sue Armitage, Joan Berman, Victoria Bruner, Josh Callahan, Adam Carter, Jim Grah
 
 ## User Guide
 
-A [quick guide](https://github.com/hsu-library-project-x/citing-insights-beta/blob/master/CI%20Documentation%20Beta.pdf) was developed by the Citing Insights team to assist users.
+A [quick guide](https://github.com/hsu-library-project-x/citing-insights-version1/blob/master/CI%20User%20Documentation%20Verson%201.pdf) was developed by the Citing Insights team to assist users.
 
