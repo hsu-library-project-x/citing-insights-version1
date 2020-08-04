@@ -1,0 +1,45 @@
+{
+  "name": "server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "backend": "nodemon --ignore tmp/ --ignore fileUpload/ ./bin/www",
+    "frontend": "npm run start --prefix ../client/",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\""
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chance": "^1.1.6",
+    "concurrently": "^4.1.2",
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "ejs": "^2.7.4",
+    "eslint": "^5.16.0",
+    "express": "~4.16.1",
+    "express-session": "^1.17.1",
+    "formidable": "^1.2.2",
+    "helmet": "^3.23.0",
+    "jimp": "^0.9.8",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.19",
+    "morgan": "~1.9.1",
+    "n": "^6.5.1",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^1.19.4",
+    "passport": "^0.4.1",
+    "passport-google-oauth": "^2.0.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-google-token": "^0.1.2",
+    "pdf-parse": "^1.1.1",
+    "pdfreader": "^1.0.7",
+    "shelljs": "^0.8.4",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2"
+  }
+}

@@ -1,0 +1,52 @@
+body{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin:0;
+}
+
+.Title{
+  margin-top: 1em;
+  text-align: center;
+}
+
+.FileInput{
+  background: lightgray;
+  padding: 1em 1em 1em 0;
+  margin-bottom: 1em;
+}
+
+.configuration_form{
+  width:60%;
+  margin-left: auto;
+  margin-right:auto;
+  padding: 1em;
+}
+
+.modal_fieldset{
+  margin: 2em;
+}
+
+.config_background{
+  background: #3f4257;
+}
+
+.container{
+  margin-bottom: 2em;
+}
+
+.modal_form{
+  text-align: center;
+  padding: 1em;
+}
+
+.splash-screen{
+  position: fixed;
+  top: 50%;
+  left: 35%;
+}
+
+
+

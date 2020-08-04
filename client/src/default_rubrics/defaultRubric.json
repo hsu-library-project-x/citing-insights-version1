@@ -1,0 +1,152 @@
+[
+    {
+        "name": "Determine the Extent of Information Needed",
+        "cards": [
+            {
+                "cardTitle": "Capstone 4",
+                "cardText": "Effectively defines the scope of the research question or thesis. Effectively determines key concepts. Types of information (sources) selected directly relate to concepts or answer research question",
+                "cardScore": "4"
+            },
+            {
+                "cardTitle": "Milestone 3",
+                "cardText": "Defines the scope of the research question or thesis completely. Can determine key concepts. Types of information (sources) selected relate to concepts or answer research question.",
+                "cardScore": "3"
+            },
+            {
+                "cardTitle": "Milestone 2",
+                "cardText": "Defines the scope of the research question or thesis incompletely (parts are missing, remains too broad or too narrow, etc.). Can determine key concepts. Types of information (sources) selected partially relate to concepts or answer research question.",
+                "cardScore": "2"
+            },
+            {
+                "cardTitle": "Benchmark 1",
+                "cardText": "Has difficulty defining the scope of the research question or thesis. Has difficulty determining key concepts. Types of information (sources) selected do not relate to concepts or answer research question.",
+                "cardScore": "1"
+            }
+        ]
+    },
+    {
+        "name": "Evaluate Information and its Sources Critically",
+        "cards": [
+            {
+                "cardTitle": "Capstone 4",
+                "cardText": "Chooses a variety of information sources appropriate to the scope and discipline of the research question. Selects sources after considering the importance (to the researched topic) of the multiple criteria used (such as relevance to the research question. currency, authority, audience, and bias or point of view).",
+                "cardScore": "4"
+            },
+            {
+                "cardTitle": "Milestone 3",
+                "cardText": "Chooses a variety of information sources appropriate to the scope and discipline of the research question. Selects sources using multiple criteria (such as relevance to the research question, currency, and authority).",
+                "cardScore": "3"
+            },
+            {
+                "cardTitle": "Milestone 2",
+                "cardText": "Chooses a variety of information sources. Selects sources using basic criteria (such as relevance to the research question and currency).",
+                "cardScore": "2"
+            },
+            {
+                "cardTitle": "Benchmark 1",
+                "cardText": "Chooses a few information sources. Selects sources using limited criteria (such as relevance to the research question).",
+                "cardScore": "1"
+            }
+        ]
+    },
+    {
+        "name": "Use Information Effectively to Accomplish a Specific Purpose",
+        "cards": [
+            {
+                "cardTitle": "Capstone 4",
+                "cardText": "Communicates, organizes and synthesizes information from sources to fully achieve a specific purpose, with clarity and depth",
+                "cardScore": "4"
+            },
+            {
+                "cardTitle": "Milestone 3",
+                "cardText": "Communicates, organizes and synthesizes information from sources. Intended purpose is achieved.",
+                "cardScore": "3"
+            },
+            {
+                "cardTitle": "Milestone 2",
+                "cardText": "Communicates and organizes information from sources. The information is not yet synthesized, so the intended purpose is not fully achieved.",
+                "cardScore": "2"
+            },
+            {
+                "cardTitle": "Benchmark 1",
+                "cardText": "Communicates information from sources. The information is fragmented and/or used inappropriately (misquoted, taken out of context, or incorrectly paraphrased, etc.), so the intended purpose is not achieved.",
+                "cardScore": "1"
+            }
+        ]
+    },
+    {
+        "name": "Access and Use Information Ethically and Legally",
+        "cards": [
+            {
+                "cardTitle": "Capstone 4",
+                "cardText": "Students use correctly all of the following information use strategies (use of citations and references; choice of paraphrasing, summary, or quoting; using information in ways that are true to original context; distinguishing between common knowledge and ideas requiring attribution) and demonstrate a full understanding of the ethical and legal restrictions on the use of published, confidential, and/or proprietary information.",
+                "cardScore": "4"
+            },
+            {
+                "cardTitle": "Milestone 3",
+                "cardText": "Students use correctly three of the following information use strategies (use of citations and references; choice of paraphrasing, summary, or quoting; using information in ways that are true to original context; distinguishing between common knowledge and ideas requiring attribution) and demonstrates a full understanding of the ethical and legal restrictions on the use of published, confidential, and/or proprietary information.",
+                "cardScore": "3"
+            },
+            {
+                "cardTitle": "Milestone 2",
+                "cardText": "Students use correctly two of the following information use strategies (use of citations and references; choice of paraphrasing, summary, or quoting; using information in ways that are true to original context; distinguishing between common knowledge and ideas requiring attribution) and demonstrates a full understanding of the ethical and legal restrictions on the use of published, confidential, and/or proprietary information.",
+                "cardScore": "2"
+            },
+            {
+                "cardTitle": "Benchmark 1",
+                "cardText": "Students use correctly one of the following information use strategies (use of citations and references; choice of paraphrasing, summary, or quoting; using information in ways that are true to original context; distinguishing between common knowledge and ideas requiring attribution) and demonstrates a full understanding of the ethical and legal restrictions on the use of published, confidential, and/or proprietary information.",
+                "cardScore": "1"
+            }
+        ]
+    },
+    {
+        "name": "Sources and Evidence",
+        "cards": [
+            {
+                "cardTitle": "Capstone 4",
+                "cardText": "Demonstrates skillful use of high quality, credible, relevant sources to develop ideas that are appropriate for the discipline and genre of the writing",
+                "cardScore": "4"
+            },
+            {
+                "cardTitle": "Milestone 3",
+                "cardText": "Demonstrates consistent use of credible, relevant sources to support ideas that are situated within the discipline and genre of the writing.",
+                "cardScore": "3"
+            },
+            {
+                "cardTitle": "Milestone 2",
+                "cardText": "Demonstrates an attempt to use credible and/or relevant sources to support ideas that are appropriate for the discipline and genre of the writing.",
+                "cardScore": "2"
+            },
+            {
+                "cardTitle": "Benchmark 1",
+                "cardText": "Demonstrates an attempt to use sources to support ideas in the writing.",
+                "cardScore": "1"
+            }
+        ]
+    },
+    {
+        "name": "Evidence",
+        "cards": [
+            {
+                "cardTitle": "Capstone 4",
+                "cardText": "Information is taken from source(s) with enough interpretation/evaluation to develop a comprehensive analysis or synthesis. Viewpoints of experts are questioned thoroughly.",
+                "cardScore": "4"
+            },
+            {
+                "cardTitle": "Milestone 3",
+                "cardText": "Information is taken from source(s) with enough interpretation/evaluation to develop a coherent analysis or synthesis. Viewpoints of experts are subject to questioning.",
+                "cardScore": "3"
+            },
+            {
+                "cardTitle": "Milestone 2",
+                "cardText": "Information is taken from source(s) with some interpretation/evaluation, but not enough to develop a coherent analysis or Synthesis. Viewpoints of experts are taken as mostly fact, with little questioning.",
+                "cardScore": "2"
+            },
+            {
+                "cardTitle": "Benchmark 1",
+                "cardText": "Information is taken from source(s) without. Any interpretation/evaluation. Viewpoints of experts are taken as fact, without question.",
+                "cardScore": "1"
+            }
+        ]
+    }
+]

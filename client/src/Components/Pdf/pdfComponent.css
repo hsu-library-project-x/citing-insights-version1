@@ -1,0 +1,48 @@
+span::selection {
+    background: #d0dcff;
+    /*background: #b3daff;*/
+    /*color:transparent;*/
+    color:black;
+
+}
+
+.hide-pdf{
+    display: none;
+}
+
+::-moz-selection { /* Code for Firefox */
+    background: #ccecff;
+    color:transparent;
+}
+
+.pdf-ToolBar{
+     justify-content: center;
+}
+
+.GridItem{
+    max-height: 800px;
+}
+
+.outline-list {
+    display: block;
+    overflow-y: scroll;
+    height: 100px;
+    width: auto;
+    border: 1px solid black;
+    justify-content: center;
+    margin: 1em;
+    align-items: center;
+}
+
+.pdf-container {
+    display: flex;
+    width:90%;
+    max-width: calc(100% - 2em);
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.document-wrapper {
+    max-height: 800px;
+    overflow-y: auto;
+}   
