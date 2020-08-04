@@ -19,7 +19,7 @@ GEM
     namae (1.0.1)
     rack (2.0.7)
     sinatra (1.0)
-      rack (>= 2.1.4)
+      rack (2.1.4)
     wapiti (1.0.5)
       builder (~> 3.2)
 
