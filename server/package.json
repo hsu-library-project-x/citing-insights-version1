@@ -22,12 +22,12 @@
     "express": "~4.16.1",
     "express-session": "^1.17.1",
     "formidable": "^1.2.2",
-    "helmet": "^3.23.0",
+    "helmet": "^3.23.3",
     "jimp": "^0.9.8",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.19",
+    "mongoose": "^5.9.27",
     "morgan": "~1.9.1",
-    "n": "^6.5.1",
+    "n": "^6.7.0",
     "node-fetch": "^2.6.0",
     "nodemon": "^1.19.4",
     "passport": "^0.4.1",
@@ -40,6 +40,6 @@
     "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.2"
+    "@babel/core": "^7.11.0"
   }
 }
