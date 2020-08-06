@@ -15,7 +15,8 @@ class OverviewTableGroup extends Component {
             assignments: [],
             papers: [],
             citations: [],
-            assignmentList: []
+            assignmentList: [],
+            CSVrows: []
         }
 
         this.getGroup = this.getGroup.bind(this);
@@ -24,6 +25,7 @@ class OverviewTableGroup extends Component {
         this.fetchPapers = this.fetchPapers.bind(this);
         this.getCitations = this.getCitations.bind(this);
         this.fetchCitations = this.fetchCitations.bind(this);
+        this.createRows = this.createRows.bind(this);
         this.buildAssignmentObjects = this.buildAssignmentObjects.bind(this);
     };
 
@@ -125,6 +127,62 @@ class OverviewTableGroup extends Component {
     }
 
 
+    createRows() {
+        let data = [];
+
+        if (this.state.assignmentList !== undefined) {
+            let row = {
+                'Assignment': '',
+                'Paper': '',
+                'Rubric': '',
+                'Evaluators': [],
+                'Number_of_Evaluators': 0,
+                'Average_Score': 0.0,
+            };
+            this.state.assignmentList.forEach((assignment) => {
+                row.Assignment = assignment.name;
+                if (assignment.papers !== undefined) {
+                    assignment.papers.forEach((paper) => {
+                        console.log(paper);
+                        row.Paper = paper.title;
+                        if (paper.assessments !== undefined) {
+                            paper.assessments.forEach((assessment) => {
+                                if (assessment.user_eval !== undefined) {
+                                    row.Rubric = assessment.rubric_title;
+                                    row.Number_of_Evaluators = assessment.user_eval.length;
+                                    row.Average_Score = assessment.average_value;
+                                    assessment.user_eval.forEach((user) => {
+                                        row.Evaluators.push(`${user.email} - ${user.rubric_score}`);
+                                    })
+                                    console.log(row);
+                                    data.push(row);
+
+                                    row = {
+                                        'Assignment': assignment.name,
+                                        'Paper': paper.title,
+                                        'Rubric': '',
+                                        'Evaluators': [],
+                                        'Number_of_Evaluators': 0,
+                                        'Average_Score': 0.0,
+                                    };
+                                }
+                            })
+                        }
+                    })
+                }
+            })
+
+            this.setState({
+                CSVrows: data
+            });
+        }
+    }
+
+
+
+
+
+
     buildAssignmentObjects() {
         // Want object to look like: 
         //  Assignment: { 
@@ -201,7 +259,7 @@ class OverviewTableGroup extends Component {
 
                                                 assessment = {
                                                     user_eval: [],
-                                                    average_value: 0,
+                                                    average_value: 0.0,
                                                     rubric_id: "",
                                                     rubric_title: ""
                                                 };
@@ -269,24 +327,34 @@ class OverviewTableGroup extends Component {
                                                     user_eval_array = [];
                                                 }
 
+                                                
                                                 if (assessment.user_eval.length > 0) {
                                                     assessment.average_value = (assessment.average_value / assessment.user_eval.length);
                                                     assessments.push(assessment);
+                                                    console.log(assessment.average_value);
+
                                                 }
 
-                                                assessment = {};
-
+                                                assessment = {
+                                                    user_eval: [],
+                                                    average_value: 0.0,
+                                                    rubric_id: "",
+                                                    rubric_title: ""
+                                                };
                                             }
                                             break;
                                         }
                                     }
                                 }
                                 let avg = 0.0;
-                                for(let b = 0; b < assessments.length; b++){
-                                    for(let c = 0; c < assessments[b].user_eval.length; c++){
+                                
+                                for (let b = 0; b < assessments.length; b++) {
+
+                                    for (let c = 0; c < assessments[b].user_eval.length; c++) {
                                         avg += Number(assessments[b].user_eval[c].rubric_value);
                                     }
-                                    assessments[b].average_value = avg /  assessments[b].user_eval.length
+                                    assessments[b].average_value = avg / assessments[b].user_eval.length
+                                    avg = 0.0;
                                 }
                                 paper.assessments = assessments;
                                 let paperClone = JSON.parse(JSON.stringify(paper));
@@ -301,9 +369,12 @@ class OverviewTableGroup extends Component {
             }
 
 
+
             this.setState({
                 assignmentList: assignmentList
             })
+
+            this.createRows();
         }
     }
 
@@ -311,6 +382,9 @@ class OverviewTableGroup extends Component {
 
     render() {
         let assignmentList = this.state.assignmentList;
+        console.log(assignmentList);
+        let rows = this.state.CSVrows;
+        console.log(rows);
 
         return (
             <div>
@@ -324,6 +398,11 @@ class OverviewTableGroup extends Component {
                     Back to Overview Selection
                 </Button>
 
+                <CSVLink data={rows} filename={"groupOverview.csv"}>
+                    <Button color={'primary'} variant={'contained'} >
+                        Download CSV
+                    </Button>
+                </CSVLink>
 
                 <Button disabled={true} variant={'contained'}>
                     Download PDF
@@ -333,71 +412,63 @@ class OverviewTableGroup extends Component {
                     Overview for {this.state.group.name}
                 </Typography>
 
-                <Table>
-                    {assignmentList.map((assignment) => (
-                        <div>
-                            <TableHead>
-                                <TableRow>
-                                    <TableCell>
-                                        <strong>Assignment:</strong> {assignment.name}
-                                    </TableCell>
-                                </TableRow>
-                            </TableHead>
+                {assignmentList.map((assignment) => (
+                    <Table>
+                        <TableHead>
+                            <TableRow>
+                                <TableCell>
+                                    <strong>Assignment:</strong> {assignment.name}
+                                </TableCell>
+                            </TableRow>
+                        </TableHead>
 
-                            <TableBody>
-                                {assignment.papers.map((paper) => (
-                                    <ul>
-                                        <TableRow>
-                                            <TableCell>
-                                                <strong>Paper:</strong> {paper.title}
-                                            </TableCell>
-                                        </TableRow>
-                                        <TableRow>
-                                            {paper.assessments.map((assessment) => (
+                        <TableBody>
+                            {assignment.papers.map((paper) => (
+                                <ul>
+                                    <TableRow>
+                                        <TableCell>
+                                            <strong>Paper:</strong> {paper.title}
+                                        </TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                        {paper.assessments.map((assessment) => (
+                                            <ul>
+                                                <TableRow>
+                                                    <TableCell>
+                                                        <strong>Rubric:</strong> {assessment.rubric_title}
+                                                    </TableCell>
+                                                </TableRow>
                                                 <ul>
-                                                    <Table>
-                                                        <TableHead>
-                                                            <TableRow>
-                                                                <TableCell>
-                                                                    <strong>Rubric:</strong> {assessment.rubric_title}
-                                                                </TableCell>
-                                                            </TableRow>
-                                                        </TableHead>
-                                                        <ul>
-                                                            <TableBody>
-                                                                <TableRow>
-                                                                    {assessment.user_eval.map((user) => (
-                                                                        <TableCell style={{border: "1px black solid"}}>
-                                                                            {user.email}
-                                                                        </TableCell>
-                                                                    ))}
-                                                                    <TableCell style={{border: "1px black solid"}}>
-                                                                        Average
+                                                    <TableRow>
+                                                        {assessment.user_eval.map((user) => (
+                                                            <TableCell style={{ border: "1px black solid" }}>
+                                                                {user.email}
+                                                            </TableCell>
+                                                        ))}
+                                                        <TableCell style={{ border: "1px black solid" }}>
+                                                            Average
                                                                     </TableCell>
-                                                                </TableRow>
-                                                                <TableRow>
-                                                                    {assessment.user_eval.map((user) => (
-                                                                        <TableCell style={{border: "1px black solid"}}>
-                                                                            {user.rubric_score}
-                                                                        </TableCell>
-                                                                    ))}
-                                                                    <TableCell style={{border: "1px black solid"}}>
-                                                                        {assessment.average_value}
-                                                                    </TableCell>
-                                                                </TableRow>
-                                                            </TableBody>
-                                                        </ul>
-                                                    </Table>
+                                                    </TableRow>
+                                                    <TableRow>
+                                                        {assessment.user_eval.map((user) => (
+                                                            <TableCell style={{ border: "1px black solid" }}>
+                                                                {user.rubric_score}
+                                                            </TableCell>
+                                                        ))}
+                                                        <TableCell style={{ border: "1px black solid" }}>
+                                                            {assessment.average_value}
+                                                        </TableCell>
+                                                    </TableRow>
                                                 </ul>
-                                            ))}
-                                        </TableRow>
-                                    </ul>
-                                ))}
-                            </TableBody>
-                        </div>
-                    ))
-                    }
-                </Table>
+                                            </ul>
+                                        ))}
+                                    </TableRow>
+                                </ul>
+                            ))}
+                        </TableBody>
+                    </Table>
+                ))
+                }
             </div >
         );
     }

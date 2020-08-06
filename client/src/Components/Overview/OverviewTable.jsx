@@ -66,7 +66,6 @@ class OverviewTable extends Component {
                     citation.assessments.forEach((assessment => {
                         data.push(this.formatCitation(citation, assessment));
                     }));
-
                 }
             });
         }
@@ -76,6 +75,7 @@ class OverviewTable extends Component {
 
     render() {
         let rows = this.showCitations();
+        console.log(rows);
         return (
             <div>
                 <Typography align={"center"} variant={"subtitle1"} component={"p"} gutterBottom={true}>
