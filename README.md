@@ -7,6 +7,7 @@ A powerful web application designed to streamline assessment of students' inform
 
 * [Version](#version)
 * [Getting Started](#getting-started)
+* [User Guide](#user-guide)
 * [Rubrics](#rubrics)
 * [Version 1.0 Features](#version-10-features)
 * [Future Features](#future-features)
@@ -17,7 +18,6 @@ A powerful web application designed to streamline assessment of students' inform
 * [Project Sponsor](#project-sponsor)
 * [License](#license)
 * [Acknowledgments](#acknowledgments)
-* [User Guide](#user-guide)
 
 ## Version
  1.0 
@@ -25,6 +25,9 @@ A powerful web application designed to streamline assessment of students' inform
 ## Getting Started
 For configuring the server, follow these instructions: [CI Server Installation](https://github.com/hsu-library-project-x/citing-insights-version1/blob/master/CI%20Server%20Installation.md) 
   
+## User Guide
+A [quick guide](https://github.com/hsu-library-project-x/citing-insights-version1/blob/master/CI%20User%20Documentation%20Verson%201.pdf) was developed by the Citing Insights team to assist users.
+
 ## Rubrics
   * [Rubric Resource Library](https://docs.google.com/document/d/1mvjP-wZ0KyNkRVN183dm86Eb90jDzh4V9vJt9x1j6Y0/edit?usp=sharing)
   
@@ -77,8 +80,3 @@ This project is licensed under the MIT License
 
 A big thank you to our alpha and beta testers!  
 Sue Armitage, Joan Berman, Victoria Bruner, Josh Callahan, Adam Carter, Jim Graham, Chris Guillen, Sally Hang, Julia Heatherwick, Alison Holmes, Katia Karadjova, Cyril Oberlander, Jeremy Shellhase, Meghann Weldon, Joshua Zender, and everyone at the Humboldt State University Library. Also a big thank you to the Graduation Initiative 2025 from California State University, and Humboldt State University for their support of this project. HSU Library provide project based learning opportunities to solve challenges faced by higher education and the community at large. One of the key questions for Citing Insights is how can we make assessment easier. 
-
-## User Guide
-
-A [quick guide](https://github.com/hsu-library-project-x/citing-insights-version1/blob/master/CI%20User%20Documentation%20Verson%201.pdf) was developed by the Citing Insights team to assist users.
-
