@@ -7,11 +7,10 @@ A powerful web application designed to streamline assessment of students' inform
 
 * [Version](#version)
 * [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installing ](#installing )
-* [Deployment](#deployment)
+* [Rubrics](#rubrics)
+* [Version 1.0 Features](#version-10-features)
+* [Future Features](#future-features)
 * [Known Issues](#known-issues)
-* [Version 1.0 Features](#version-1.0-features)
 * [Built With](#built-with)
 * [Contributing](#contributing)
 * [Authors](#authors)
@@ -20,128 +19,34 @@ A powerful web application designed to streamline assessment of students' inform
 * [Acknowledgments](#acknowledgments)
 * [User Guide](#user-guide)
 
-
-
 ## Version
  1.0 
 
 ## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-* [Node.js](https://nodejs.org/en/)
-* [MongoDB](https://docs.mongodb.com/manual/installation/) (follow instructions for operating system)
-* [Ruby](https://www.ruby-lang.org/en/documentation/installation/) 
-
-```
- [sudo] apt-get install ruby-full
-```
-
-* [AnyStyle.io](https://anystyle.io/)
-```
-[sudo] gem install anystyle-cli
-```
-
-## Installing 
-
-A step by step series of examples that tell you how to get a development env running 
-
-###### Step 1: Navigate to the client directory and install dependencies
-
-```
-cd citing-insights-beta
-```
-```
-cd client
-```
-```
-npm install
-```
-
-###### Step 2: Navigate to server directory and install dependencies
-
-```
-cd ..
-```
-```
-cd server
-```
-```
- npm install
-```
-
-###### Step 3: Obtain Google API Credentials
-
-Citing Insights requires Google to log in and out of the application. In order for the Citing Insights log in to work for your institution, you need to obtain Google API Credentials. 
-
-To obtain credentials go to console.developers.google.com, create a new project, and enable (it is free, but it requires a credit/debit card to register) to both Google Analytics API and Identity Toolkit API.
-
-Be sure to click the Credentials tab on the left and set the correct Redirect URI’s, as instructed by Google. 
-
-###### Step 4: Add Credentials to Application
-
-Create a **config.js** file in the server directory and place 'clientID' and 'clientSecret' information with your Google Credentials, keep the quotes. 
-
-```
-module.exports = {
-   'googleAuth': {
-       'clientID': '',
-       'clientSecret': ''
-   }
-};
-```
-
-Similarly,  navigate to /client/src/ create a **config.json** file and place your ClientID into the empty field. 
-
-```
-{
-   "GOOGLE_CLIENT_ID": ""
-}
-```
-
-###### Step 5: Launch App Locally
-
-To start the application locally and in development mode, from a Linux or Linux based terminal navigate to the server directory and type
-
-```
-npm run dev
-```
-
-This will launch the server at http://localhost:5000, and the client (React application) at http://localhost:3000
-
-###### Notes: 
-
-At any point, if you wish to stop the application type CTRL + C in the active terminal. 
-
-This configuration is running nodemon, which allows for the server to restart any time it detects a change in a file (hot reloading). So, no need to bring down and bring up the server each time a change is made to a file, simply saving the file suffices.
-
-## Deployment
-For additional information on how to launch on a Linux server see our [Server Documentation](https://github.com/hsu-library-project-x/citing-insights-beta/blob/master/Server%20Documentation%20Beta.pdf)
-
-## Known Issues
-* PDF viewer
-  * Search Tool: If multiple matches on the same line, all matches on that line will become highlighted
-  * PDF text font and size changes upon text selection
+For configuring the server, follow these instructions: [CI Server Installation](https://github.com/hsu-library-project-x/citing-insights-version1/blob/master/CI%20Server%20Installation.md) 
   
 ## Rubrics
   * [Rubric Resource Library](https://docs.google.com/document/d/1mvjP-wZ0KyNkRVN183dm86Eb90jDzh4V9vJt9x1j6Y0/edit?usp=sharing)
   
 ## Version 1.0 Features
-Citing Insights Version 1 release is expected in the end of May, and the planned features include: 
+Citing Insights Version 1 features: 
 * Enhanced PDF Search functionality
 * Multiple evaluators mode, with inter-reliability testing / norming, and analytics
 * Analytical reports & outcomes
 * Group Administration Console
 * Robust rubric resources
 * More Improvements to Design
-
+  
 ## Future Features
 Citing Insights will continue to develop the application, including:
 * Integration road-map with Learning Management System. 
 * Robust reports & outcomes, with data visualizations
 
+## Known Issues
+* PDF viewer
+  * Search Tool: If multiple matches on the same line, all matches on that line will become highlighted
+  * PDF text font and size changes upon text selection
+  
 ## Built With
 * [MongoDB ](https://www.mongodb.com/) - database
 * [ExpressJS](https://expressjs.com/) - web framework for nodeJS
