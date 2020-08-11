@@ -26,7 +26,7 @@ A powerful web application designed to streamline assessment of students' inform
 For configuring the server, follow these instructions: [CI Server Installation](https://github.com/hsu-library-project-x/citing-insights-version1/blob/master/CI%20Server%20Installation.md) 
   
 ## User Guide
-A [quick guide](https://github.com/hsu-library-project-x/citing-insights-version1/blob/master/CI%20User%20Documentation%20Verson%201.pdf) was developed by the Citing Insights team to assist users.
+A [user guide](https://github.com/hsu-library-project-x/citing-insights-version1/blob/master/CI%20User%20Documentation%20Verson%201.pdf) was developed by the Citing Insights team to assist users.
 
 ## Rubrics
   * [Rubric Resource Library](https://docs.google.com/document/d/1mvjP-wZ0KyNkRVN183dm86Eb90jDzh4V9vJt9x1j6Y0/edit?usp=sharing)
