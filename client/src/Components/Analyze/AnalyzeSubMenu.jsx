@@ -143,6 +143,7 @@ createTreeItems(json, state) {
                   labelId={"selectClasslabel"}
                   onChange={this.handleInputChange}
                   defaultValue={""}
+                  value={this.state.selectedId}
                   inputProps={{
                     name: 'selectedId',
                   }}
@@ -161,6 +162,7 @@ createTreeItems(json, state) {
                   labelId={"selectAssignmentlabel"}
                   onChange={this.handleInputChange}
                   defaultValue={""}
+                  value={this.state.selectedId}
                   inputProps={{
                     name: 'selectedId',
                   }}
