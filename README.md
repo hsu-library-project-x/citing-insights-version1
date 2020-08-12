@@ -68,8 +68,8 @@ This is an open source project and we encourage anyone to build upon this outsta
  * [Kyle Smith](https://github.com/smittythehippy)
  * [Mitchell Waters](https://github.com/mkwalters)
  
-
-  ![citing insights team](https://github.com/hsu-library-project-x/citing-insights-version1/IMG_2882.jpg)
+![Citing Insights Team Summer 2019](https://raw.githubusercontent.com/hsu-library-project-x/citing-insights-beta/master/summer2019.jpg)
+![Citing Insights Team Summer 2020](https://raw.githubusercontent.com/hsu-library-project-x/citing-insights-beta/master/summer2020.png)
  
 ## Project Sponsor 
 
