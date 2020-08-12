@@ -69,7 +69,7 @@ This is an open source project and we encourage anyone to build upon this outsta
  * [Mitchell Waters](https://github.com/mkwalters)
  
 
-  ![citing insights team](ttps://github.com/hsu-library-project-x/citing-insights-version1/IMG_2882.jpg)
+  ![citing insights team](https://github.com/hsu-library-project-x/citing-insights-version1/IMG_2882.jpg)
  
 ## Project Sponsor 
 
