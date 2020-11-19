@@ -28,7 +28,7 @@
     "mongoose": "^5.9.19",
     "morgan": "~1.9.1",
     "n": "^6.5.1",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "nodemon": "^1.19.4",
     "passport": "^0.4.1",
     "passport-google-oauth": "^2.0.0",
