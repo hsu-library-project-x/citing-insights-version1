@@ -8,7 +8,7 @@ import ZoomOutIcon from '@material-ui/icons/ZoomOut';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 
-import "react-pdf/dist/Page/AnnotationLayer.css";
+import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "./pdfComponent.css";
 
 pdfjs.GlobalWorkerOptions.workerSrc =

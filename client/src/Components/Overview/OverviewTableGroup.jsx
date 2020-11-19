@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { Button, Typography, Table, TableBody, TableCell, TableHead, TableRow } from '@material-ui/core';
 import { CSVLink } from "react-csv";
+import { Bar } from 'react-chartjs-2';
+
 
 const columns = [
 
@@ -27,6 +29,7 @@ class OverviewTableGroup extends Component {
         this.fetchCitations = this.fetchCitations.bind(this);
         this.createRows = this.createRows.bind(this);
         this.buildAssignmentObjects = this.buildAssignmentObjects.bind(this);
+        this.createBarGraph = this.createBarGraph.bind(this);
     };
 
     componentDidMount() {
@@ -327,9 +330,9 @@ class OverviewTableGroup extends Component {
                                                     user_eval_array = [];
                                                 }
 
-                                                
+
                                                 if (assessment.user_eval.length > 0) {
-                                                    assessment.average_value = (assessment.average_value / assessment.user_eval.length);
+                                                    assessment.average_value = (assessment.average_value / assessment.user_eval.length).toFixed(2);
                                                     assessments.push(assessment);
                                                     console.log(assessment.average_value);
 
@@ -347,13 +350,13 @@ class OverviewTableGroup extends Component {
                                     }
                                 }
                                 let avg = 0.0;
-                                
+
                                 for (let b = 0; b < assessments.length; b++) {
 
                                     for (let c = 0; c < assessments[b].user_eval.length; c++) {
                                         avg += Number(assessments[b].user_eval[c].rubric_value);
                                     }
-                                    assessments[b].average_value = avg / assessments[b].user_eval.length
+                                    assessments[b].average_value = (avg / assessments[b].user_eval.length).toFixed(2);
                                     avg = 0.0;
                                 }
                                 paper.assessments = assessments;
@@ -378,6 +381,44 @@ class OverviewTableGroup extends Component {
         }
     }
 
+    createBarGraph(list) {
+
+        console.log(list);
+
+        let emails = [];
+        let scores = [];
+
+        //for each assessment, grab the average score and all the user scores
+        for (let t = 0; t < list.user_eval.length; t++) {
+            console.log(list.user_eval);
+            emails.push(list.user_eval[t].email);
+            scores.push(Number(list.user_eval[t].rubric_value));
+        }
+
+        emails.push("average");
+        scores.push(Number(list.average_value));
+
+        console.log(emails);
+        console.log(scores);
+
+        return (
+            <Bar data={{
+                labels: emails,
+                datasets: [
+                    {
+                        label: list.rubric_title,
+                        backgroundColor: 'rgba(75,192,192,1)',
+                        borderColor: 'rgba(0,0,0,1)',
+                        borderWidth: 1,
+                        data: scores
+                    }
+                ]
+            }}
+                width={30}
+                height={20}
+                options={{ maintainAspectRatio: true, scales: { yAxes: [{ ticks: { beginAtZero: true } }] } }} />
+        )
+    }
 
 
     render() {
@@ -385,6 +426,8 @@ class OverviewTableGroup extends Component {
         console.log(assignmentList);
         let rows = this.state.CSVrows;
         console.log(rows);
+
+
 
         return (
             <div>
@@ -447,7 +490,7 @@ class OverviewTableGroup extends Component {
                                                         ))}
                                                         <TableCell style={{ border: "1px black solid" }}>
                                                             Average
-                                                                    </TableCell>
+                                                        </TableCell>
                                                     </TableRow>
                                                     <TableRow>
                                                         {assessment.user_eval.map((user) => (
@@ -459,6 +502,7 @@ class OverviewTableGroup extends Component {
                                                             {assessment.average_value}
                                                         </TableCell>
                                                     </TableRow>
+                                                    {this.createBarGraph(assessment)}
                                                 </ul>
                                             </ul>
                                         ))}

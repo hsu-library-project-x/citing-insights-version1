@@ -50,8 +50,8 @@ class DiscoveryTool extends Component {
         let query = encodeURI(this.state.citation["title"][0]);
         let url = this.props.oneSearchUrl;
         let vid = this.props.oneSearchViewId;
-        
-        
+
+
         // Some Exception Handling would be nice in case the URL provided doesn't work!
         //   
         //ex. https://chico-primo.hosted.exlibrisgroup.com/primo-explore/
@@ -72,6 +72,16 @@ class DiscoveryTool extends Component {
             <div className="discoveryTool" >
                 <h4>Discovery Tool</h4>
                 <Card>
+                    <button onClick={this.open_s2}>
+                        Semantic Scholar
+                    </button>
+                    <p>
+                        Citation Velocity: {this.state.citation.citationVelocity}
+                        <br />
+                        Influential Citations: {this.state.citation.influentialCitationCount}
+                    </p>
+                </Card>
+                <Card>
                     <button onClick={this.open_google_scholar}>
                         Google Scholar
                     </button>
@@ -83,16 +93,7 @@ class DiscoveryTool extends Component {
                     </button>
                     <p>Search through Library Discovery System</p>
                 </Card>
-                <Card>
-                    <button onClick={this.open_s2}>
-                        Semantic Scholar
-                    </button>
-                    <p>
-                        Citation Velocity: {this.state.citation.citationVelocity}
-                        <br />
-                        Influential Citations: {this.state.citation.influentialCitationCount}
-                    </p>
-                </Card>
+
             </div>
         );
     }
