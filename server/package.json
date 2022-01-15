@@ -36,7 +36,7 @@
     "passport-google-token": "^0.1.2",
     "pdf-parse": "^1.1.1",
     "pdfreader": "^1.0.7",
-    "shelljs": "^0.8.4",
+    "shelljs": "^0.8.5",
     "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
